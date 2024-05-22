@@ -1,0 +1,179 @@
+[
+  {
+    "name": "Apple",
+    "icon": "🍎"
+  },
+  {
+    "name": "Banana",
+    "icon": "🍌"
+  },
+  {
+    "name": "Cherry",
+    "icon": "🍒"
+  },
+  {
+    "name": "Grapes",
+    "icon": "🍇"
+  },
+  {
+    "name": "Kiwi",
+    "icon": "🥝"
+  },
+  {
+    "name": "Lemon",
+    "icon": "🍋"
+  },
+  {
+    "name": "Mango",
+    "icon": "🥭"
+  },
+  {
+    "name": "Orange",
+    "icon": "🍊"
+  },
+  {
+    "name": "Peach",
+    "icon": "🍑"
+  },
+  {
+    "name": "Pear",
+    "icon": "🍐"
+  },
+  {
+    "name": "Pineapple",
+    "icon": "🍍"
+  },
+  {
+    "name": "Strawberry",
+    "icon": "🍓"
+  },
+  {
+    "name": "Watermelon",
+    "icon": "🍉"
+  },
+  {
+    "name": "Avocado",
+    "icon": "🥑"
+  },
+  {
+    "name": "Egg",
+    "icon": "🥚"
+  },
+  {
+    "name": "Milk",
+    "icon": "🥛"
+  },
+  {
+    "name": "Butter",
+    "icon": "🧈"
+  },
+  {
+    "name": "Bread",
+    "icon": "🍞"
+  },
+  {
+    "name": "Cheese",
+    "icon": "🧀"
+  },
+  {
+    "name": "Salt",
+    "icon": "🧂"
+  },
+
+  {
+    "name": "Honey",
+    "icon": "🍯"
+  },
+  {
+    "name": "Fish",
+    "icon": "🐟"
+  },
+  {
+    "name": "Chicken",
+    "icon": "🍗"
+  },
+  {
+    "name": "Meat",
+    "icon": "🥩"
+  },
+  {
+    "name": "Mutton",
+    "icon": "🍖"
+  },
+  {
+    "name": "Bacon",
+    "icon": "🥓"
+  },
+  {
+    "name": "Shrimp",
+    "icon": "🍤"
+  },
+  {
+    "name": "Rice",
+    "icon": "🍚"
+  },
+  {
+    "name": "Chocolate",
+    "icon": "🍫"
+  },
+  {
+    "name": "Sugar",
+    "icon": "🍬"
+  },
+  {
+    "name": "Tomato",
+    "icon": "🍅"
+  },
+  {
+    "name": "Eggplant",
+    "icon": "🍆"
+  },
+  {
+    "name": "Carrot",
+    "icon": "🥕"
+  },
+  {
+    "name": "Corn",
+    "icon": "🌽"
+  },
+  {
+    "name": "Hot Pepper",
+    "icon": "🌶️"
+  },
+  {
+    "name": "Cucumber",
+    "icon": "🥒"
+  },
+  {
+    "name": "Leafy Green",
+    "icon": "🥬"
+  },
+  {
+    "name": "Broccoli",
+    "icon": "🥦"
+  },
+  {
+    "name": "Garlic",
+    "icon": "🧄"
+  },
+  {
+    "name": "Onion",
+    "icon": "🧅"
+  },
+  {
+    "name": "Mushroom",
+    "icon": "🍄"
+  },
+  {
+    "name": "Peanuts",
+    "icon": "🥜"
+  },
+  {
+    "name": "Potato",
+    "icon": "🥔"
+  },
+  {
+    "name": "Sweet Potato",
+    "icon": "🍠"
+  }
+]
