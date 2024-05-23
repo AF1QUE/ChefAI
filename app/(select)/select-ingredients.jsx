@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { usePromptContext } from "../../context/PromptProvider";
+
 import { StatusBar } from "expo-status-bar";
 
 import { View, Text, FlatList, ScrollView, Image } from "react-native";
@@ -7,10 +10,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import appleImage from "../../assets/ingredients/apple.png";
 
-import IngredientCard from "../../components/IngredientCard";
+import FoodCard from "../../components/FoodCard";
 
-export default function stepOne() {
-  const renderItem = ({ item }) => <IngredientCard item={item} />;
+export default function selectIngredients() {
+  const renderItem = ({ item }) => <FoodCard item={item} />;
 
   return (
     <SafeAreaView className="bg-white h-full px-6">

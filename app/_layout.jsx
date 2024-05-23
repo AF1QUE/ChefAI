@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 import { NativeBaseProvider } from "native-base";
 
+import PromptProvider from "@/context/PromptProvider";
+
 import { useColorScheme } from "@/hooks/useColorScheme";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -40,13 +42,15 @@ const RootLayout = () => {
   }
 
   return (
-    <NativeBaseProvider>
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="(select)" options={{ headerShown: false }} />
-        <Stack.Screen name="(generate)" options={{ headerShown: false }} />
-      </Stack>
-    </NativeBaseProvider>
+    <PromptProvider>
+      <NativeBaseProvider>
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="(select)" options={{ headerShown: false }} />
+          <Stack.Screen name="(generate)" options={{ headerShown: false }} />
+        </Stack>
+      </NativeBaseProvider>
+    </PromptProvider>
   );
 };
 

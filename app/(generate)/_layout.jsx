@@ -1,3 +1,5 @@
+import { usePromptContext } from "../../context/PromptProvider";
+
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { View, Text, TouchableOpacity } from "react-native";
@@ -7,8 +9,11 @@ import CustomButton from "../../components/CustomButton";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { router } from "expo-router";
+import { get } from "react-native/Libraries/TurboModule/TurboModuleRegistry";
 
 const GenerateLayout = () => {
+  const { getPrompt } = usePromptContext();
+
   return (
     <>
       <SafeAreaView>
@@ -27,7 +32,7 @@ const GenerateLayout = () => {
       <View className="px-6 py-5 bg-white">
         <CustomButton
           title="Generate"
-          handlePress={() => router.replace("/generate-recipe")}
+          handlePress={() => console.log(getPrompt)}
           icon={
             <MaterialCommunityIcons
               name="star-four-points"

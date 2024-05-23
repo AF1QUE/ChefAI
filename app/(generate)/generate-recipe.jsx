@@ -1,3 +1,4 @@
+import { usePromptContext } from "../../context/PromptProvider";
 import { StatusBar } from "expo-status-bar";
 
 import { View, Text, FlatList, ScrollView, Image } from "react-native";
@@ -8,9 +9,10 @@ import FormField from "../../components/FormField";
 
 import CustomDropdown from "../../components/CustomDropdown";
 import CustomTextArea from "../../components/CustomTextArea";
-import CustomSlider from "../../components/CustomSlider";
 
-export default function stepTwo() {
+export default function generateRecipe() {
+  const { setPrompt } = usePromptContext();
+
   return (
     <SafeAreaView className="bg-white h-full px-6">
       <ScrollView automaticallyAdjustContentInsets="true">
@@ -20,7 +22,18 @@ export default function stepTwo() {
               Type
             </Text>
             <View className="border border-outline flex flex-col w-full rounded-[8px]">
-              <CustomDropdown />
+              <CustomDropdown
+                items={[
+                  { label: "Vegan", value: "vegan" },
+                  { label: "Vegeterian", value: "vegeterian" },
+                ]}
+                handleChangeFn={(value) =>
+                  setPrompt((prev) => ({
+                    ...prev,
+                    type: value === "select" ? "" : value,
+                  }))
+                }
+              />
             </View>
           </View>
 
@@ -29,7 +42,24 @@ export default function stepTwo() {
               Cuisine
             </Text>
             <View className="border border-outline flex flex-col w-full rounded-[8px]">
-              <CustomDropdown />
+              <CustomDropdown
+                items={[
+                  { label: "Italian", value: "italian" },
+                  { label: "Chinese", value: "chinese" },
+                  { label: "Mexican", value: "mexican" },
+                  { label: "Indian", value: "indian" },
+                  { label: "Thai", value: "thai" },
+                  { label: "French", value: "french" },
+                  { label: "Japanese", value: "japanese" },
+                  { label: "American", value: "american" },
+                ]}
+                handleChangeFn={(value) =>
+                  setPrompt((prev) => ({
+                    ...prev,
+                    cuisine: value === "select" ? "" : value,
+                  }))
+                }
+              />
             </View>
           </View>
 
@@ -38,7 +68,14 @@ export default function stepTwo() {
             <Text className="text-gray-main font-bold text-[17px] tracking-[0.5px] mb-4">
               Additional Description
             </Text>
-            <CustomTextArea />
+            <CustomTextArea
+              handleChangeFn={(value) =>
+                setPrompt((prev) => ({
+                  ...prev,
+                  description: value,
+                }))
+              }
+            />
           </View>
         </View>
       </ScrollView>

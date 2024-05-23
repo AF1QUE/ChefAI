@@ -1,3 +1,6 @@
+import { usePromptContext } from "../context/PromptProvider";
+import { useEffect } from "react";
+
 import { StatusBar } from "expo-status-bar";
 import { Redirect, router } from "expo-router";
 import { View, Text, FlatList, ScrollView, Image } from "react-native";
@@ -9,7 +12,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import CustomButton from "../components/CustomButton";
 
 export default function Index() {
-  // return <Redirect href="/stepOne" />;
+  const { resetPrompt } = usePromptContext();
+
+  useEffect(() => {
+    resetPrompt();
+  }, []);
 
   return (
     <SafeAreaView className="bg-white h-full">

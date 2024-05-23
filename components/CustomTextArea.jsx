@@ -1,6 +1,9 @@
+import { useState } from "react";
+
 import { TextArea, Box } from "native-base";
 
-const CustomTextArea = () => {
+const CustomTextArea = ({ handleChangeFn }) => {
+  const [textAreaValue, setTextAreaValue] = useState("");
   return (
     <Box alignItems="center" w="100%">
       <TextArea
@@ -12,6 +15,7 @@ const CustomTextArea = () => {
         placeholder="E.g. I want a cake that is moist and fluffy."
         w="100%"
         totalLines={4}
+        onChangeText={(value) => handleChangeFn(value)}
       />
     </Box>
   );

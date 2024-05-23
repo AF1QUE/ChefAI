@@ -2,16 +2,13 @@ import RNPickerSelect from "react-native-picker-select";
 
 import { StyleSheet } from "react-native";
 
-const CustomDropdown = () => {
+const CustomDropdown = ({ items, handleChangeFn }) => {
   return (
     <RNPickerSelect
-      onValueChange={(value) => console.log(value)}
+      onValueChange={(value) => handleChangeFn(value)}
+      // onValueChange={(value) => console.log(value)}
       placeholder={{ label: "Select", value: "select" }}
-      items={[
-        { label: "Football", value: "football" },
-        { label: "Baseball", value: "baseball" },
-        { label: "Hockey", value: "hockey" },
-      ]}
+      items={items}
       style={{
         display: "none",
       }}
