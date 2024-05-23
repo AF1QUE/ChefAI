@@ -2,7 +2,7 @@ import { usePromptContext } from "../../context/PromptProvider";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Alert } from "react-native";
 import { Redirect, Stack } from "expo-router";
 import React from "react";
 import CustomButton from "../../components/CustomButton";
@@ -32,7 +32,17 @@ const GenerateLayout = () => {
       <View className="px-6 py-5 bg-white">
         <CustomButton
           title="Generate"
-          handlePress={() => console.log(getPrompt)}
+          handlePress={() => {
+            const { ingredients, type, cuisine, description } = getPrompt;
+            if (!ingredients.length || !type || !cuisine || !description) {
+              Alert.alert(
+                "Incomplete Selection",
+                "Please fill out all the fields to proceed."
+              );
+            } else {
+              console.log(getPrompt);
+            }
+          }}
           icon={
             <MaterialCommunityIcons
               name="star-four-points"

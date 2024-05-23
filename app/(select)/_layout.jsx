@@ -2,7 +2,7 @@ import { usePromptContext } from "../../context/PromptProvider";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Alert } from "react-native";
 import { Redirect, Stack } from "expo-router";
 import React from "react";
 import CustomButton from "../../components/CustomButton";
@@ -38,7 +38,21 @@ const SelectLayout = () => {
       <View className="px-6 py-5 bg-white">
         <CustomButton
           title="Next"
-          handlePress={() => router.replace("/generate-recipe")}
+          handlePress={() => {
+            if (getPrompt.ingredients.length <= 0) {
+              Alert.alert(
+                "No items selected!",
+                "Please select at least 2 items to proceed."
+              );
+            } else if (getPrompt.ingredients.length < 2) {
+              Alert.alert(
+                "Miniumum of 2 items required!",
+                "Please select at least 2 items to proceed."
+              );
+            } else {
+              router.push("generate-recipe");
+            }
+          }}
         ></CustomButton>
       </View>
     </>
