@@ -14,17 +14,21 @@ const FormField = ({
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <View className={`space-y-2 ${otherStyles}`}>
-      <Text className="text-base text-gray-100 font-pmedium">{title}</Text>
+    <View className={`space-y-4 ${otherStyles}`}>
+      <Text className="text-gray-main font-bold text-[17px] tracking-[0.5px]">
+        {title}
+      </Text>
 
-      <View className="w-full h-16 px-4 bg-black-100 rounded-2xl border-2 border-gray-secondary focus:border-primary flex flex-row items-center">
+      <View className="w-full h-16 px-4 bg-black-100 rounded-[8px] border border-outline focus:border-gray-secondary flex flex-row items-center">
         <TextInput
-          className="flex-1 text-gray-main font-psemibold text-base"
+          className="text-gray-main font-psemibold text-base"
           value={value}
           placeholder={placeholder}
           placeholderTextColor="#7B7B8B"
           onChangeText={handleChangeText}
           secureTextEntry={title === "Password" && !showPassword}
+          multiline={true}
+          numberOfLines={10}
           {...props}
         />
 
