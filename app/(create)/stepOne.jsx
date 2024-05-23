@@ -1,33 +1,46 @@
 import { StatusBar } from "expo-status-bar";
 
-import { View, Text, FlatList, ScrollView } from "react-native";
-import ingredients from "../../constants/ingredients.json";
+import { View, Text, FlatList, ScrollView, Image } from "react-native";
+import ingredients from "../../constants/ingredients";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import appleImage from "../../assets/ingredients/apple.png";
+
 export default function stepOne() {
   const renderItem = ({ item }) => (
-    <View style={{ borderWidth: 1, margin: 10, padding: 10 }}>
-      <Text style={{ fontSize: 20 }}>{item.icon}</Text>
-      <Text style={{ fontSize: 20 }}>{item.name}</Text>
+    <View>
+      <View className="border border-[#D0DBEA] rounded-[16px] p-4 flex flex-col items-center justify-center mb-[28px] px-[7%]">
+        {/* <Image source={appleImage} className="w-full" resizeMode="contain" /> */}
+        <Text className="text-[84px]">{item.icon}</Text>
+        <Text className="text-[16px] font-bold text-gray-main tracking-[0.5px] mt-[24px]">
+          {item.name}
+        </Text>
+      </View>
     </View>
   );
 
   return (
-    <SafeAreaView className="bg-white h-full">
-      <ScrollView
-        contentContainerStyle={{
-          height: "100%",
+    <SafeAreaView className="bg-white h-full px-6">
+      <FlatList
+        data={ingredients}
+        className="mt-[-36px]"
+        keyExtractor={(item) => item.name}
+        renderItem={renderItem}
+        numColumns={2}
+        columnWrapperStyle={{
+          justifyContent: "space-between",
         }}
-      >
-        <View>
-          <FlatList
-            data={ingredients}
-            renderItem={renderItem}
-            keyExtractor={(item) => item.name}
-          />
-        </View>
-      </ScrollView>
+        ListHeaderComponent={
+          <Text className="text-gray-main font-bold text-[17px] tracking-[0.5px] mb-[32px]">
+            Select Ingredients
+          </Text>
+        }
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
+      />
+
+      <StatusBar backgroundColor="#ffffff" style="dark" />
     </SafeAreaView>
   );
 }

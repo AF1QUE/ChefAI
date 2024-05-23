@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Apple",
+    "icon": "../../assets/images/apple.png"
+  },
+  {
+    "name": "Banana",
+    "icon": "../../assets/images/banana.png"
+  },
+  {
+    "name": "Cherry",
+    "icon": "../../assets/images/cherry.png"
+  },
+  {
+    "name": "Grapes",
+    "icon": "../../assets/images/grapes.png"
+  },
+  {
+    "name": "Kiwi",
+    "icon": "../../assets/images/kiwi.png"
+  },
+  {
+    "name": "Lemon",
+    "icon": "../../assets/images/lemon.png"
+  },
+  {
+    "name": "Mango",
+    "icon": "../../assets/images/mango.png"
+  },
+  {
+    "name": "Orange",
+    "icon": "../../assets/images/orange.png"
+  },
+  {
+    "name": "Peach",
+    "icon": "../../assets/images/peach.png"
+  },
+  {
+    "name": "Pear",
+    "icon": "../../assets/images/pear.png"
+  },
+  {
+    "name": "Pineapple",
+    "icon": "../../assets/images/pineapple.png"
+  },
+  {
+    "name": "Strawberry",
+    "icon": "../../assets/images/strawberry.png"
+  },
+  {
+    "name": "Watermelon",
+    "icon": "../../assets/images/watermelon.png"
+  },
+  {
+    "name": "Avocado",
+    "icon": "../../assets/images/avocado.png"
+  },
+  {
+    "name": "Egg",
+    "icon": "../../assets/images/egg.png"
+  },
+  {
+    "name": "Milk",
+    "icon": "../../assets/images/milk.png"
+  },
+  {
+    "name": "Butter",
+    "icon": "../../assets/images/butter.png"
+  },
+  {
+    "name": "Bread",
+    "icon": "../../assets/images/bread.png"
+  },
+  {
+    "name": "Cheese",
+    "icon": "../../assets/images/cheese.png"
+  },
+  {
+    "name": "Salt",
+    "icon": "../../assets/images/salt.png"
+  },
+  {
+    "name": "Honey",
+    "icon": "../../assets/images/honey.png"
+  },
+  {
+    "name": "Fish",
+    "icon": "../../assets/images/fish.png"
+  },
+  {
+    "name": "Chicken",
+    "icon": "../../assets/images/chicken.png"
+  },
+  {
+    "name": "Meat",
+    "icon": "../../assets/images/meat.png"
+  },
+  {
+    "name": "Mutton",
+    "icon": "../../assets/images/mutton.png"
+  },
+  {
+    "name": "Bacon",
+    "icon": "../../assets/images/bacon.png"
+  },
+  {
+    "name": "Shrimp",
+    "icon": "../../assets/images/shrimp.png"
+  },
+  {
+    "name": "Rice",
+    "icon": "../../assets/images/rice.png"
+  },
+  {
+    "name": "Chocolate",
+    "icon": "../../assets/images/chocolate.png"
+  },
+  {
+    "name": "Sugar",
+    "icon": "../../assets/images/sugar.png"
+  },
+  {
+    "name": "Tomato",
+    "icon": "../../assets/images/tomato.png"
+  },
+  {
+    "name": "Eggplant",
+    "icon": "../../assets/images/eggplant.png"
+  },
+  {
+    "name": "Carrot",
+    "icon": "../../assets/images/carrot.png"
+  },
+  {
+    "name": "Corn",
+    "icon": "../../assets/images/corn.png"
+  },
+  {
+    "name": "Hot Pepper",
+    "icon": "../../assets/images/hot_pepper.png"
+  },
+  {
+    "name": "Cucumber",
+    "icon": "../../assets/images/cucumber.png"
+  },
+  {
+    "name": "Leafy Green",
+    "icon": "../../assets/images/leafy_green.png"
+  },
+  {
+    "name": "Broccoli",
+    "icon": "../../assets/images/broccoli.png"
+  },
+  {
+    "name": "Garlic",
+    "icon": "../../assets/images/garlic.png"
+  },
+  {
+    "name": "Onion",
+    "icon": "../../assets/images/onion.png"
+  },
+  {
+    "name": "Mushroom",
+    "icon": "../../assets/images/mushroom.png"
+  },
+  {
+    "name": "Peanuts",
+    "icon": "../../assets/images/peanuts.png"
+  },
+  {
+    "name": "Potato",
+    "icon": "../../assets/images/potato.png"
+  },
+  {
+    "name": "Sweet Potato",
+    "icon": "../../assets/images/sweet_potato.png"
+  }
+]
