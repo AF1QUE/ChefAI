@@ -7,6 +7,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import FormField from "../../components/FormField";
 
 import CustomDropdown from "../../components/CustomDropdown";
+import CustomTextArea from "../../components/CustomTextArea";
+import CustomSlider from "../../components/CustomSlider";
 
 export default function stepTwo() {
   return (
@@ -32,7 +34,11 @@ export default function stepTwo() {
           </View>
 
           <View className="w-full">
-            <FormField title="Additional description" />
+            {/* <FormField title="Additional description" /> */}
+            <Text className="text-gray-main font-bold text-[17px] tracking-[0.5px] mb-4">
+              Additional Description
+            </Text>
+            <CustomTextArea />
           </View>
         </View>
       </ScrollView>

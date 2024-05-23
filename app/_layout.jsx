@@ -3,6 +3,7 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
+import { NativeBaseProvider } from "native-base";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
 
@@ -39,10 +40,12 @@ const RootLayout = () => {
   }
 
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="(create)" options={{ headerShown: false }} />
-    </Stack>
+    <NativeBaseProvider>
+      <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="(create)" options={{ headerShown: false }} />
+      </Stack>
+    </NativeBaseProvider>
   );
 };
 

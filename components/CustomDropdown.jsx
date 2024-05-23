@@ -6,6 +6,7 @@ const CustomDropdown = () => {
   return (
     <RNPickerSelect
       onValueChange={(value) => console.log(value)}
+      placeholder={{ label: "Select", value: "select" }}
       items={[
         { label: "Football", value: "football" },
         { label: "Baseball", value: "baseball" },
