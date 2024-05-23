@@ -9,7 +9,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import CustomButton from "../components/CustomButton";
 
 export default function Index() {
-  return <Redirect href="/stepTwo" />;
+  // return <Redirect href="/stepOne" />;
 
   return (
     <SafeAreaView className="bg-white h-full">
@@ -38,7 +38,7 @@ export default function Index() {
           <CustomButton
             title={"Get Started"}
             containerStyles="mt-[72px]"
-            handlePress={() => router.push("/stepOne")}
+            handlePress={() => router.push("/select-ingredients")}
           />
         </View>
       </ScrollView>

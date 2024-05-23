@@ -5,6 +5,9 @@ const CustomTextArea = () => {
     <Box alignItems="center" w="100%">
       <TextArea
         fontSize={16}
+        borderRadius={8}
+        borderColor={"#D0DBEA"}
+        placeholderTextColor={"#D0D0D0"}
         h={40}
         placeholder="E.g. I want a cake that is moist and fluffy."
         w="100%"

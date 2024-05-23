@@ -43,7 +43,8 @@ const RootLayout = () => {
     <NativeBaseProvider>
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="(create)" options={{ headerShown: false }} />
+        <Stack.Screen name="(select)" options={{ headerShown: false }} />
+        <Stack.Screen name="(generate)" options={{ headerShown: false }} />
       </Stack>
     </NativeBaseProvider>
   );
