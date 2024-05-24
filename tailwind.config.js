@@ -11,7 +11,7 @@ module.exports = {
           secondary: "#9FA5C0",
         },
         outline: "#D0DBEA",
-        form: "#F4F5F7",
+        fo: "#F4F5F7",
       },
       fontFamily: {
         thin: ["Inter-Thin", "sans-serif"],

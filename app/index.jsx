@@ -5,7 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import { Redirect, router } from "expo-router";
 import { View, Text, FlatList, ScrollView, Image } from "react-native";
 
-import onboardingImg from "../assets/images/onboarding.png";
+import onboardingImg from "../assets/images/system/onboarding.png";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -45,7 +45,7 @@ export default function Index() {
           <CustomButton
             title={"Get Started"}
             containerStyles="mt-[72px]"
-            handlePress={() => router.push("/select-ingredients")}
+            handlePress={() => router.push("/recipe")}
           />
         </View>
       </ScrollView>
