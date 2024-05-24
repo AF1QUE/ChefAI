@@ -45,7 +45,7 @@ export default function Index() {
           <CustomButton
             title={"Get Started"}
             containerStyles="mt-[72px]"
-            handlePress={() => router.push("/recipe")}
+            handlePress={() => router.push("/select-ingredients")}
           />
         </View>
       </ScrollView>

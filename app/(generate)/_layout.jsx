@@ -3,12 +3,11 @@ import { usePromptContext } from "../../context/PromptProvider";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { View, Text, TouchableOpacity, Alert } from "react-native";
-import { Redirect, Stack } from "expo-router";
+import { Redirect, router, Stack } from "expo-router";
 import React from "react";
 import CustomButton from "../../components/CustomButton";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import { router } from "expo-router";
 import { get } from "react-native/Libraries/TurboModule/TurboModuleRegistry";
 
 const GenerateLayout = () => {
@@ -41,6 +40,7 @@ const GenerateLayout = () => {
               );
             } else {
               console.log(getPrompt);
+              router.push("/recipe");
             }
           }}
           icon={

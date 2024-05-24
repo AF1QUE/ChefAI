@@ -24,8 +24,13 @@ export default function generateRecipe() {
             <View className="border border-outline flex flex-col w-full rounded-[8px]">
               <CustomDropdown
                 items={[
-                  { label: "Vegan", value: "vegan" },
-                  { label: "Vegeterian", value: "vegeterian" },
+                  { label: "Anything", value: "anything" },
+                  { label: "Meal", value: "meal" },
+                  { label: "Salad", value: "salad" },
+                  { label: "Appetizer", value: "appetizer" },
+                  { label: "Beverage", value: "beverage" },
+                  { label: "Dessert", value: "dessert" },
+                  { label: "Soup", value: "soup" },
                 ]}
                 handleChangeFn={(value) =>
                   setPrompt((prev) => ({
@@ -57,6 +62,29 @@ export default function generateRecipe() {
                   setPrompt((prev) => ({
                     ...prev,
                     cuisine: value === "select" ? "" : value,
+                  }))
+                }
+              />
+            </View>
+          </View>
+
+          <View className="flex flex-col items-start justify-start gap-4 w-full mb-6">
+            <Text className="text-gray-main font-bold text-[17px] tracking-[0.5px]">
+              Servings
+            </Text>
+            <View className="border border-outline flex flex-col w-full rounded-[8px]">
+              <CustomDropdown
+                items={[
+                  { label: "1", value: "1" },
+                  { label: "2", value: "2" },
+                  { label: "3", value: "3" },
+                  { label: "4", value: "4" },
+                  { label: "5+", value: "5+" },
+                ]}
+                handleChangeFn={(value) =>
+                  setPrompt((prev) => ({
+                    ...prev,
+                    servings: value === "select" ? "" : value,
                   }))
                 }
               />

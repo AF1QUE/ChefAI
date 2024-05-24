@@ -20,7 +20,7 @@ const CustomButton = ({
       disabled={isLoading}
     >
       {icon ? icon : null}
-      <Text className={`text-white font-semibold text-[15px]  ${textStyles}`}>
+      <Text className={`text-white font-semibold text-[15px] ${textStyles}`}>
         {title}
       </Text>
 

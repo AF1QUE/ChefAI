@@ -8,6 +8,7 @@ const PromptProvider = ({ children }) => {
     ingredients: [],
     type: "",
     cuisine: "",
+    servings: "",
     description: "",
   });
 
@@ -22,6 +23,7 @@ const PromptProvider = ({ children }) => {
       ingredients: [],
       type: "",
       cuisine: "",
+      servings: "",
       description: "",
     });
   };
