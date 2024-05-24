@@ -13,9 +13,9 @@ const PromptProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    return () => {
-      resetPrompt();
-    };
+    // return () => {
+    //   resetPrompt();
+    // };
   }, []);
 
   const resetPrompt = () => {

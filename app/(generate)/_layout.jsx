@@ -1,4 +1,5 @@
 import { usePromptContext } from "../../context/PromptProvider";
+import { useRecipeContext } from "../../context/RecipeProvider";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
@@ -8,10 +9,9 @@ import React from "react";
 import CustomButton from "../../components/CustomButton";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import { get } from "react-native/Libraries/TurboModule/TurboModuleRegistry";
-
 const GenerateLayout = () => {
   const { getPrompt } = usePromptContext();
+  const { fetchRecipe, isLoading } = useRecipeContext();
 
   return (
     <>
@@ -39,8 +39,9 @@ const GenerateLayout = () => {
                 "Please fill out all the fields to proceed."
               );
             } else {
-              console.log(getPrompt);
-              router.push("/recipe");
+              // fetchRecipe().then(() => router.push("/recipe"));
+              fetchRecipe();
+              router.push("/loading");
             }
           }}
           icon={
@@ -50,6 +51,7 @@ const GenerateLayout = () => {
               color="white"
             />
           }
+          isLoading={isLoading}
         ></CustomButton>
       </View>
     </>

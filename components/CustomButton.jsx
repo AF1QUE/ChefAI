@@ -1,4 +1,6 @@
-import { ActivityIndicator, Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
+
+import { Spinner } from "native-base";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
@@ -19,19 +21,17 @@ const CustomButton = ({
       }`}
       disabled={isLoading}
     >
-      {icon ? icon : null}
-      <Text className={`text-white font-semibold text-[15px] ${textStyles}`}>
-        {title}
-      </Text>
+      {!isLoading && (icon ? icon : null)}
 
-      {isLoading && (
-        <ActivityIndicator
-          animating={isLoading}
-          color="#fff"
-          size="small"
-          className="ml-2"
-        />
+      {/* {icon ? icon : null} */}
+
+      {!isLoading && (
+        <Text className={`text-white font-semibold text-[15px] ${textStyles}`}>
+          {title}
+        </Text>
       )}
+
+      {isLoading && <Spinner size={24} color="#ffffff" />}
     </TouchableOpacity>
   );
 };

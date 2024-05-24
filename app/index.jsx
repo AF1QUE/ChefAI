@@ -1,4 +1,6 @@
 import { usePromptContext } from "../context/PromptProvider";
+import { useRecipeContext } from "../context/RecipeProvider";
+
 import { useEffect } from "react";
 
 import { StatusBar } from "expo-status-bar";
@@ -13,9 +15,11 @@ import CustomButton from "../components/CustomButton";
 
 export default function Index() {
   const { resetPrompt } = usePromptContext();
+  const { resetRecipe } = useRecipeContext();
 
   useEffect(() => {
     resetPrompt();
+    resetRecipe();
   }, []);
 
   return (

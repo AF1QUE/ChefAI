@@ -6,6 +6,7 @@ import "react-native-reanimated";
 import { NativeBaseProvider } from "native-base";
 
 import PromptProvider from "@/context/PromptProvider";
+import RecipeProvider from "@/context/RecipeProvider";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
 
@@ -43,14 +44,17 @@ const RootLayout = () => {
 
   return (
     <PromptProvider>
-      <NativeBaseProvider>
-        <Stack>
-          <Stack.Screen name="index" options={{ headerShown: false }} />
-          <Stack.Screen name="(select)" options={{ headerShown: false }} />
-          <Stack.Screen name="(generate)" options={{ headerShown: false }} />
-          <Stack.Screen name="recipe" options={{ headerShown: false }} />
-        </Stack>
-      </NativeBaseProvider>
+      <RecipeProvider>
+        <NativeBaseProvider>
+          <Stack>
+            <Stack.Screen name="index" options={{ headerShown: false }} />
+            <Stack.Screen name="(select)" options={{ headerShown: false }} />
+            <Stack.Screen name="(generate)" options={{ headerShown: false }} />
+            <Stack.Screen name="recipe" options={{ headerShown: false }} />
+            <Stack.Screen name="loading" options={{ headerShown: false }} />
+          </Stack>
+        </NativeBaseProvider>
+      </RecipeProvider>
     </PromptProvider>
   );
 };

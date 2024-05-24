@@ -1,8 +1,11 @@
 import { View, Text, Image, ScrollView, FlatList } from "react-native";
+import { useRecipeContext } from "../context/RecipeProvider";
 
 import { Ionicons } from "@expo/vector-icons";
 import { Octicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
+
+import { router } from "expo-router";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -51,6 +54,12 @@ const steps = [
 ];
 
 const Recipe = () => {
+  const { recipe, isLoading, thumbnailUrl } = useRecipeContext();
+
+  if (isLoading) {
+    router.replace("/loading");
+  }
+
   return (
     <SafeAreaView className="bg-white h-full">
       <ScrollView
@@ -62,14 +71,20 @@ const Recipe = () => {
         }}
       >
         <View>
-          <Image source={food} className="w-full h-[225px] rounded-[16px]" />
+          <Image
+            source={{
+              uri: thumbnailUrl,
+            }}
+            className="w-full h-[225px] rounded-[16px]"
+          />
 
           <View className="flex flex-col gap-3 mt-[32px]">
             <Text className="text-gray-main font-bold text-[17px] tracking-[0.5px]">
-              Minimalist Indian Cashew Chicken with Capsicum and Honey
+              {/* Minimalist Indian Cashew Chicken with Capsicum and Honey */}
+              {recipe.name}
             </Text>
             <Text className="text-gray-secondary font-[15px] mb-2">
-              Italian • 30 mins • 4 Servings
+              {recipe.cuisine} • {recipe.duration} • {recipe.servings} servings
             </Text>
             <View className="flex flex-row items-center space-x-2">
               <Image
@@ -89,10 +104,7 @@ const Recipe = () => {
               Description
             </Text>
             <Text className="text-gray-secondary text-[15px] leading-[25px]">
-              A quick and easy Indian dish featuring tender chicken, crunchy
-              cashews, and vibrant capsicum glazed with honey. Perfectly
-              seasoned with simple spices, this dish pairs well with rice or
-              bread.
+              {recipe.description}
             </Text>
           </View>
 
@@ -103,11 +115,11 @@ const Recipe = () => {
               Ingredients
             </Text>
 
-            {ingredients.map((item, idx) => (
+            {recipe.ingredients.map((item, idx) => (
               <View className="flex flex-row items-center space-x-2" key={idx}>
                 <Ionicons name="checkmark-circle" size={24} color="#1FCC79" />
                 <Text className="text-[15px] font-normal text-gray-main">
-                  {item}
+                  {item.name}, {item.quantity}
                 </Text>
               </View>
             ))}
@@ -120,7 +132,7 @@ const Recipe = () => {
               Steps
             </Text>
 
-            {steps.map((step, idx) => (
+            {recipe.instructions.map((item, idx) => (
               <View key={idx} className="flex flex-row space-x-4">
                 <View className="bg-[#2E3E5C] w-[24px] h-[24px] flex justify-center items-center rounded-full">
                   <Text className="text-white font-bold text-[12px]">
@@ -128,8 +140,8 @@ const Recipe = () => {
                   </Text>
                 </View>
                 <Text className="text-[#2E3E5C] text-[15px] leading-[25px]">
-                  <Text className="font-bold">{step.title}: </Text>
-                  {step.description}
+                  <Text className="font-bold">{item.stepName}: </Text>
+                  {item.description}
                 </Text>
               </View>
             ))}
@@ -139,7 +151,7 @@ const Recipe = () => {
             <CustomButton
               title={"Download PDF"}
               className="w-full"
-              // icon={<Feather name="download" size={20} color="white" />}
+              handlePress={() => console.log(recipe)}
             />
           </View>
         </View>
